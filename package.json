@@ -1,0 +1,44 @@
+{
+  "name": "angular-jspm-typescript-component",
+  "version": "1.0.0",
+  "description": "This project serves as a starting point for creating reusable components.",
+  "main": "dist/jspmts-component.min.js",
+  "scripts": {
+    "prestart": "npm install",
+    "postinstall": "jspm install",
+    "start": "gulp",
+    "test": "gulp test"
+  },
+  "authors": [
+    "Ben Sparks <bsparks42@gmail.com>"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jspm": "^0.5.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-tslint": "^4.3.3",
+    "jasmine-core": "^2.4.1",
+    "jspm": "^0.16.31",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.8",
+    "karma-jspm": "^2.1.0",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs": "^2.1.3",
+    "phantomjs-prebuilt": "^2.1.5",
+    "tslint": "^3.6.0",
+    "typescript": "^1.8.9"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.2",
+      "angular-mocks": "github:angular/bower-angular-mocks@^1.5.2",
+      "text": "github:systemjs/plugin-text@^0.0.7",
+      "ts": "github:frankwallis/plugin-typescript@^4.0.2"
+    },
+    "devDependencies": {
+      "ts-runtime": "npm:babel-runtime@^5.8.24",
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}
