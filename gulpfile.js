@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 var paths = {
     sources: 'src/**/*.ts',
     views: 'src/**/*.html',
-    main: 'src/lst-component.dir.ts'
+    main: 'src/jspmts-component.dir.ts'
 };
 
 gulp.task('lint', function() {
@@ -21,7 +21,7 @@ gulp.task('lint', function() {
 gulp.task('build', function() {
     var stream = gulp.src(paths.main)
         .pipe(jspm({ selfExecutingBundle: true })) // `jspm bundle-sfx main`
-        .pipe(rename('lst-component.js'))
+        .pipe(rename('jspmts-component.js'))
         .pipe(gulp.dest('dist/'));
 
     return stream;
@@ -30,7 +30,7 @@ gulp.task('build', function() {
 gulp.task('minify', function() {
     var stream = gulp.src(paths.main)
         .pipe(jspm({ selfExecutingBundle: true, minify: true })) // `jspm bundle-sfx main`
-        .pipe(rename('lst-component.min.js'))
+        .pipe(rename('jspmts-component.min.js'))
         .pipe(gulp.dest('dist/'));
 
     return stream;
